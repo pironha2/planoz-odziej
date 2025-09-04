@@ -1,13 +1,15 @@
 # planozlodziej
 plan lekcji z zstrybnik.pl/html w terminalu
+<br>
 
-<big>
-  Wymagania:
-</big>
+#  Wymagania:
+<br>
 python wersji >= 3
+<br>
 Ładna Zupa 4 (bs4)
+<br>
 Requesty (Requests)
-
+<br>
 #Instalacja:
 
 
