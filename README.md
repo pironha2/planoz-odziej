@@ -17,3 +17,7 @@ Pipem zainstalluj bs4 i requests
 
 # PS
 jest prawdopodobieństwo iż będzie działał na innych planach stworzonych za pomocą programu Plan lekcji Optivum firmy VULCAN lecz nie było to testowane
+
+działa na ekonomie w rybniku więc jest spora szansa iż na innych stronach też będzie działał
+
+
