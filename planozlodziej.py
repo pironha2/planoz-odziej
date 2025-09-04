@@ -1,11 +1,12 @@
 # v klasa sala nauczyciel opisany w kns.txt
 kns = "o24"
+strona = "https://zstrybnik.pl/html/plany/o1.html"
 
 from bs4 import BeautifulSoup
 import requests
 import re
-
-url = "https://zstrybnik.pl/html/plany/"+kns+".html"
+url = re.sub("o1", kns, strona)
+print(url)
 req = requests.get(url)
 zupka = BeautifulSoup(req.content, "html.parser")
 
