@@ -1,7 +1,6 @@
 # planozlodziej
 plan lekcji z zstrybnik.pl/html w terminalu
 <br>
-
 #  Wymagania:
 python wersji >= 3
 <br>
@@ -20,5 +19,5 @@ Pipem zainstalluj bs4 i requests
 jest prawdopodobieństwo iż będzie działał na innych planach stworzonych za pomocą programu Plan lekcji Optivum firmy VULCAN lecz nie było to testowane
 
 działa na ekonomie w rybniku więc jest spora szansa iż na innych stronach też będzie działał
-
-
+<br>
+rozpoczynam pracę na GUI 🔥🔥🔥
