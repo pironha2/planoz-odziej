@@ -9,7 +9,8 @@ python wersji >= 3
 Requesty (Requests)
 <br>
 # Instalacja:
-raczej ni edodam instalatora na windowsa bo to zbyt skomplikowane <br>
+niema narazie instalatora dla tego brancza :( <br>
+raczej nie dodam instalatora na windowsa bo to zbyt skomplikowane <br>
 Z kategorii relase wybierz odpowiedną wersje <br>
 Jeśli niema odpowiedniej wersji to: <br>
 Zainstaluj pytona wersji >= 3 <br>
