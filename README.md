@@ -1,5 +1,5 @@
-# planozlodziej
-plan lekcji z zstrybnik.pl/html w terminalu
+# planozlodziej '#'wsparcie koloru
+plan lekcji z zstrybnik.pl/html w terminalu + kolor na moment obecny powtarza dni :(
 <br>
 #  Wymagania:
 python wersji >= 3
