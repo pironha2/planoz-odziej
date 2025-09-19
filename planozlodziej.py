@@ -1,5 +1,6 @@
 # v klasa sala nauczyciel opisany w kns.txt
-kns = "o24" 
+kns = "o24"
+strona = "https://zstrybnik.pl/html/plany/o1.html"
 #zastępuje domyślny plan na wpisany powyżej 
 
 from bs4 import BeautifulSoup
@@ -10,7 +11,8 @@ from termcolor import colored, cprint
     #import przydatnych bibliotek
 
 
-url = "https://zstrybnik.pl/html/plany/"+kns+".html"
+url = re.sub("o1", kns, strona)
+print(url)
 req = requests.get(url)
 zupka = BeautifulSoup(req.content, "html.parser")
 datadzis = datetime.now().weekday()
@@ -40,17 +42,16 @@ for w in wirsze:
             text = l.get_text().replace("\xa0", "") # Usunięcie twardych spacji z html'a :)
             plan[dni[i]].append((godzinka.get_text(), text))
                                                     #Chyba wypisuje goziny do dnia czy cos
-for dzienr, dzien in enumerate(plan.items()):       #\
-    for dzień, zajemcia in plan.items():            #}gdzieś tu powtarza 5-cio krotnie dzień :( i powoduje ze tydzien koloruje
-        if dzienr == datadzis:
-            cprint(f'\n {dzień}:', 'red')
-            for godz, lekcja in zajemcia:
-                if lekcja:
-                    lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
-                    cprint(f' {godz} > {lemkcja}', 'red')   #to od #45 jest kolorowe a za tym zwykłe białe
-        else:
-            print(f'\n {dzień}:')
-            for godz, lekcja in zajemcia:
-                if lekcja:
-                    lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
-                    print(f' {godz} > {lemkcja}')    
+for dzienr, (dzień, zajemcia) in enumerate(plan.items()):
+    if dzienr == datadzis:
+        cprint(f'\n {dzień}:', 'red')
+        for godz, lekcja in zajemcia:
+            if lekcja:
+                lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
+                cprint(f' {godz} > {lemkcja}', 'red')   #to od #45 jest kolorowe a za tym zwykłe białe
+    else:
+        print(f'\n {dzień}:')
+        for godz, lekcja in zajemcia:
+            if lekcja:
+                lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
+                print(f' {godz} > {lemkcja}')    
