@@ -47,11 +47,18 @@ for dzienr, (dzień, zajemcia) in enumerate(plan.items()):
         cprint(f'\n {dzień}:', 'red')
         for godz, lekcja in zajemcia:
             if lekcja:
-                lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
-                cprint(f' {godz} > {lemkcja}', 'red')   #to od #45 jest kolorowe a za tym zwykłe białe
+                lemkcja = re.sub(r'[(][^)]*[)]', ' ', lekcja)
+                cprint(f' {godz} > {lemkcja}', 'red')   #to od #45 jest kolorowe a za tym pomarańczowe a jeszcze dalej zwykłe białe
     else:
-        print(f'\n {dzień}:')
-        for godz, lekcja in zajemcia:
-            if lekcja:
-                lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
-                print(f' {godz} > {lemkcja}')    
+        if dzienr == datadzis + 1:
+            cprint(f'\n {dzień}:', 'yellow')
+            for godz, lekcja in zajemcia:
+                if lekcja:
+                    lemkcja = re.sub(r'[(][^)]*[)]', ' ', lekcja)
+                    cprint(f' {godz} > {lemkcja}', 'yellow')
+        else:
+            print(f'\n {dzień}:')
+            for godz, lekcja in zajemcia:
+                if lekcja:
+                    lemkcja = re.sub(r'[(][^)]*[)]', '', lekcja)
+                    print(f' {godz} > {lemkcja}')    
